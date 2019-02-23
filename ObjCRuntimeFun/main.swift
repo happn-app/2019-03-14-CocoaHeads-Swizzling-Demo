@@ -1,12 +1,18 @@
-//
-//  main.swift
-//  ObjCRuntimeFun
-//
-//  Created by François Lamboley on 2019/2/19.
-//  Copyright © 2019 Frizlab. All rights reserved.
-//
+/*
+ * main.swift
+ * ObjCRuntimeFun
+ *
+ * Created by François Lamboley on 2019/2/19.
+ * Copyright © 2019 Frizlab. All rights reserved.
+ */
 
 import Foundation
 
-print("Hello, World!")
 
+
+NSLog("Let the show begin!")
+
+NSLog("")
+NSLog("********* Asking to print Hello1 *********")
+let object = HPNSimpleObject()
+object.printHello1()

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7BB682B3221C80E80008DB37 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB682B2221C80E80008DB37 /* main.swift */; };
+		7BB682BD221C82740008DB37 /* NSObject+HPNSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB682BC221C82740008DB37 /* NSObject+HPNSwizzling.m */; };
+		7BDFC217221CC45C00AB1EAB /* HPNSimpleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC216221CC45C00AB1EAB /* HPNSimpleObject.m */; };
+		7BDFC21B221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC21A221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,14 @@
 /* Begin PBXFileReference section */
 		7BB682AF221C80E70008DB37 /* ObjCRuntimeFun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjCRuntimeFun; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB682B2221C80E80008DB37 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7BB682BA221C82720008DB37 /* ObjCRuntimeFun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjCRuntimeFun-Bridging-Header.h"; sourceTree = "<group>"; };
+		7BB682BB221C82730008DB37 /* NSObject+HPNSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HPNSwizzling.h"; sourceTree = "<group>"; };
+		7BB682BC221C82740008DB37 /* NSObject+HPNSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HPNSwizzling.m"; sourceTree = "<group>"; };
+		7BB682BF221C852B0008DB37 /* HPNPreprocessorUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNPreprocessorUtils.h; sourceTree = "<group>"; };
+		7BDFC216221CC45C00AB1EAB /* HPNSimpleObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPNSimpleObject.m; sourceTree = "<group>"; };
+		7BDFC218221CC48700AB1EAB /* HPNSimpleObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNSimpleObject.h; sourceTree = "<group>"; };
+		7BDFC219221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HPNSimpleObject+ManualSwizzle.h"; sourceTree = "<group>"; };
+		7BDFC21A221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HPNSimpleObject+ManualSwizzle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +53,8 @@
 			isa = PBXGroup;
 			children = (
 				7BB682B1221C80E70008DB37 /* ObjCRuntimeFun */,
+				7BB682B9221C82390008DB37 /* Dependencies */,
+				7BB682BE221C82820008DB37 /* Supporting Files */,
 				7BB682B0221C80E70008DB37 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,8 +71,30 @@
 			isa = PBXGroup;
 			children = (
 				7BB682B2221C80E80008DB37 /* main.swift */,
+				7BDFC218221CC48700AB1EAB /* HPNSimpleObject.h */,
+				7BDFC216221CC45C00AB1EAB /* HPNSimpleObject.m */,
+				7BDFC219221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.h */,
+				7BDFC21A221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m */,
 			);
 			path = ObjCRuntimeFun;
+			sourceTree = "<group>";
+		};
+		7BB682B9221C82390008DB37 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				7BB682BF221C852B0008DB37 /* HPNPreprocessorUtils.h */,
+				7BB682BB221C82730008DB37 /* NSObject+HPNSwizzling.h */,
+				7BB682BC221C82740008DB37 /* NSObject+HPNSwizzling.m */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		7BB682BE221C82820008DB37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BB682BA221C82720008DB37 /* ObjCRuntimeFun-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +129,7 @@
 				TargetAttributes = {
 					7BB682AE221C80E70008DB37 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -103,6 +139,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7BB682A6221C80E70008DB37;
 			productRefGroup = 7BB682B0221C80E70008DB37 /* Products */;
@@ -119,7 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BDFC21B221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m in Sources */,
+				7BDFC217221CC45C00AB1EAB /* HPNSimpleObject.m in Sources */,
 				7BB682B3221C80E80008DB37 /* main.swift in Sources */,
+				7BB682BD221C82740008DB37 /* NSObject+HPNSwizzling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +217,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "${DT_TOOLCHAIN_DIR}/usr/lib/swift/macosx/";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -232,6 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "${DT_TOOLCHAIN_DIR}/usr/lib/swift/macosx/";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -244,8 +286,16 @@
 		7BB682B7221C80E80008DB37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/ObjCRuntimeFun-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -253,8 +303,15 @@
 		7BB682B8221C80E80008DB37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/ObjCRuntimeFun-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
