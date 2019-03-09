@@ -10,7 +10,7 @@
 		7B6080D52234651600751401 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6080D42234651600751401 /* JRSwizzle.m */; };
 		7BB682B3221C80E80008DB37 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB682B2221C80E80008DB37 /* main.swift */; };
 		7BB682BD221C82740008DB37 /* NSObject+HPNSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB682BC221C82740008DB37 /* NSObject+HPNSwizzling.m */; };
-		7BDFC217221CC45C00AB1EAB /* HPNSimpleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC216221CC45C00AB1EAB /* HPNSimpleObject.m */; };
+		7BDFC217221CC45C00AB1EAB /* HPNSimpleObject_M.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */; };
 		7BDFC21B221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC21A221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m */; };
 /* End PBXBuildFile section */
 
@@ -35,8 +35,8 @@
 		7BB682BB221C82730008DB37 /* NSObject+HPNSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HPNSwizzling.h"; sourceTree = "<group>"; };
 		7BB682BC221C82740008DB37 /* NSObject+HPNSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HPNSwizzling.m"; sourceTree = "<group>"; };
 		7BB682BF221C852B0008DB37 /* HPNPreprocessorUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNPreprocessorUtils.h; sourceTree = "<group>"; };
-		7BDFC216221CC45C00AB1EAB /* HPNSimpleObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPNSimpleObject.m; sourceTree = "<group>"; };
-		7BDFC218221CC48700AB1EAB /* HPNSimpleObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNSimpleObject.h; sourceTree = "<group>"; };
+		7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPNSimpleObject_M.m; sourceTree = "<group>"; };
+		7BDFC218221CC48700AB1EAB /* HPNSimpleObject_M.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNSimpleObject_M.h; sourceTree = "<group>"; };
 		7BDFC219221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HPNSimpleObject+ManualSwizzle.h"; sourceTree = "<group>"; };
 		7BDFC21A221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HPNSimpleObject+ManualSwizzle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,8 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				7BB682B2221C80E80008DB37 /* main.swift */,
-				7BDFC218221CC48700AB1EAB /* HPNSimpleObject.h */,
-				7BDFC216221CC45C00AB1EAB /* HPNSimpleObject.m */,
+				7BDFC218221CC48700AB1EAB /* HPNSimpleObject_M.h */,
+				7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */,
 				7BDFC219221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.h */,
 				7BDFC21A221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m */,
 			);
@@ -162,7 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BDFC21B221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m in Sources */,
-				7BDFC217221CC45C00AB1EAB /* HPNSimpleObject.m in Sources */,
+				7BDFC217221CC45C00AB1EAB /* HPNSimpleObject_M.m in Sources */,
 				7BB682B3221C80E80008DB37 /* main.swift in Sources */,
 				7BB682BD221C82740008DB37 /* NSObject+HPNSwizzling.m in Sources */,
 				7B6080D52234651600751401 /* JRSwizzle.m in Sources */,

@@ -6,13 +6,13 @@
  * Copyright © 2019 Frizlab. All rights reserved.
  */
 
-#import "HPNSimpleObject.h"
+#import "HPNSimpleObject_M.h"
 
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HPNSimpleObject (ManualSwizzle)
+@interface HPNSimpleObjectRoot_M (ManualSwizzle)
 @end
 
 NS_ASSUME_NONNULL_END

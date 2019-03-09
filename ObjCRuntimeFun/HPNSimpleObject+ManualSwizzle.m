@@ -12,7 +12,7 @@
 
 
 
-@implementation HPNSimpleObject (ManualSwizzle)
+@implementation HPNSimpleObjectRoot_M (ManualSwizzle)
 /* From https://nshipster.com/method-swizzling/ */
 
 + (void)load

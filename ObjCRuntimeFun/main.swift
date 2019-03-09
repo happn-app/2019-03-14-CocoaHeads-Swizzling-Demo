@@ -14,5 +14,5 @@ NSLog("Let the show begin!")
 
 NSLog("")
 NSLog("********* Asking to print Hello1 *********")
-let object = HPNSimpleObject()
+let object = HPNSimpleObjectRoot_M()
 object.printHello1()
