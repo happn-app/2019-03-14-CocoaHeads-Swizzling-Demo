@@ -1,5 +1,5 @@
 /*
- * HPNSimpleObject_M.h
+ * HPNSimpleObject_J.h
  * ObjCRuntimeFun
  *
  * Created by François Lamboley on 2019/2/20.
@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HPNSimpleObjectRoot_M : NSObject {
+@interface HPNSimpleObjectRoot_J : NSObject {
 }
 
 - (void)printHello1;
@@ -22,24 +22,24 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface HPNSimpleObjectChild1_M : HPNSimpleObjectRoot_M {
+@interface HPNSimpleObjectChild1_J : HPNSimpleObjectRoot_J {
 }
 
 @end
 
 
-@interface HPNSimpleObjectChild2_M : HPNSimpleObjectChild1_M {
+@interface HPNSimpleObjectChild2_J : HPNSimpleObjectChild1_J {
 }
 
 @end
 
 
-@interface HPNSimpleObjectChild3_M : HPNSimpleObjectChild2_M {
+@interface HPNSimpleObjectChild3_J : HPNSimpleObjectChild2_J {
 }
 
 @end
 
 
-void manualSwizzleHello3(void);
+void jrSwizzleHello3(void);
 
 NS_ASSUME_NONNULL_END

@@ -1,20 +1,20 @@
 /*
- * HPNSimpleObject_M.m
+ * HPNSimpleObject_J.m
  * ObjCRuntimeFun
  *
  * Created by François Lamboley on 2019/2/20.
  * Copyright © 2019 Frizlab. All rights reserved.
  */
 
-#import "HPNSimpleObject_M.h"
+#import "HPNSimpleObject_J.h"
 
 @import Foundation;
 
-#import "HPNSimpleObject+ManualSwizzle.h"
+#import "JRSwizzle.h"
 
 
 
-@implementation HPNSimpleObjectRoot_M
+@implementation HPNSimpleObjectRoot_J
 
 - (void)printHello1
 {
@@ -34,23 +34,23 @@
 @end
 
 
-@implementation HPNSimpleObjectChild1_M
+@implementation HPNSimpleObjectChild1_J
 
 @end
 
 
-@implementation HPNSimpleObjectChild2_M
+@implementation HPNSimpleObjectChild2_J
 
 @end
 
 
-@implementation HPNSimpleObjectChild3_M
+@implementation HPNSimpleObjectChild3_J
 
 @end
 
 
 
-@implementation HPNSimpleObjectChild2_M (ManualSwizzle)
+@implementation HPNSimpleObjectChild2_J (JRSwizzle)
 
 - (void)hpn2_printHello3
 {
@@ -61,7 +61,7 @@
 @end
 
 
-@implementation HPNSimpleObjectChild1_M (ManualSwizzle)
+@implementation HPNSimpleObjectChild1_J (JRSwizzle)
 
 - (void)hpn1_printHello3
 {
@@ -72,7 +72,7 @@
 @end
 
 
-void manualSwizzleHello3(void) {
-	manualSwizzle([HPNSimpleObjectChild2_M class], @selector(printHello3), @selector(hpn2_printHello3));
-	manualSwizzle([HPNSimpleObjectChild1_M class], @selector(printHello3), @selector(hpn1_printHello3));
+void jrSwizzleHello3(void) {
+	[HPNSimpleObjectChild2_J jr_swizzleMethod:@selector(printHello3) withMethod:@selector(hpn2_printHello3) error:NULL];
+	[HPNSimpleObjectChild1_J jr_swizzleMethod:@selector(printHello3) withMethod:@selector(hpn1_printHello3) error:NULL];
 }
