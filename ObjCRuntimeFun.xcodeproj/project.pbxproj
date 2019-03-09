@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B6080D52234651600751401 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6080D42234651600751401 /* JRSwizzle.m */; };
 		7BB682B3221C80E80008DB37 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB682B2221C80E80008DB37 /* main.swift */; };
 		7BB682BD221C82740008DB37 /* NSObject+HPNSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB682BC221C82740008DB37 /* NSObject+HPNSwizzling.m */; };
 		7BDFC217221CC45C00AB1EAB /* HPNSimpleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC216221CC45C00AB1EAB /* HPNSimpleObject.m */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B6080D32234651100751401 /* JRSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		7B6080D42234651600751401 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
 		7BB682AF221C80E70008DB37 /* ObjCRuntimeFun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjCRuntimeFun; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB682B2221C80E80008DB37 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7BB682BA221C82720008DB37 /* ObjCRuntimeFun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjCRuntimeFun-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				7BB682BF221C852B0008DB37 /* HPNPreprocessorUtils.h */,
 				7BB682BB221C82730008DB37 /* NSObject+HPNSwizzling.h */,
 				7BB682BC221C82740008DB37 /* NSObject+HPNSwizzling.m */,
+				7B6080D32234651100751401 /* JRSwizzle.h */,
+				7B6080D42234651600751401 /* JRSwizzle.m */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				7BDFC217221CC45C00AB1EAB /* HPNSimpleObject.m in Sources */,
 				7BB682B3221C80E80008DB37 /* main.swift in Sources */,
 				7BB682BD221C82740008DB37 /* NSObject+HPNSwizzling.m in Sources */,
+				7B6080D52234651600751401 /* JRSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
