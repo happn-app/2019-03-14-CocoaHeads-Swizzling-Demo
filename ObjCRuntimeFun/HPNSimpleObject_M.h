@@ -10,11 +10,14 @@
 
 
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface HPNSimpleObjectRoot_M : NSObject {
 }
 
 - (void)printHello1;
 - (void)printHello2;
+- (void)printHello3;
 
 @end
 
@@ -29,3 +32,14 @@
 }
 
 @end
+
+
+@interface HPNSimpleObjectChild3_M : HPNSimpleObjectChild2_M {
+}
+
+@end
+
+
+void manualSwizzleHello3(void);
+
+NS_ASSUME_NONNULL_END

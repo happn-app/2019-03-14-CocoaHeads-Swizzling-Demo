@@ -12,42 +12,85 @@
 
 
 
+void manualSwizzle(Class class, SEL originalSelector, SEL swizzledSelector) {
+	/* From https://nshipster.com/method-swizzling/ */
+	Method originalMethod = class_getInstanceMethod(class, originalSelector);
+	Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+	
+	BOOL didAddMethod =
+	class_addMethod(class,
+						 originalSelector,
+						 method_getImplementation(swizzledMethod),
+						 method_getTypeEncoding(swizzledMethod));
+	
+	if (didAddMethod) {
+		class_replaceMethod(class,
+								  swizzledSelector,
+								  method_getImplementation(originalMethod),
+								  method_getTypeEncoding(originalMethod));
+	} else {
+		method_exchangeImplementations(originalMethod, swizzledMethod);
+	}
+}
+
+
 @implementation HPNSimpleObjectRoot_M (ManualSwizzle)
-/* From https://nshipster.com/method-swizzling/ */
 
 + (void)load
 {
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		Class class = [self class];
-		
-		SEL originalSelector = @selector(printHello1);
-		SEL swizzledSelector = @selector(hpn_printHello1);
-		
-		Method originalMethod = class_getInstanceMethod(class, originalSelector);
-		Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-		
-		BOOL didAddMethod =
-		class_addMethod(class,
-							 originalSelector,
-							 method_getImplementation(swizzledMethod),
-							 method_getTypeEncoding(swizzledMethod));
-		
-		if (didAddMethod) {
-			class_replaceMethod(class,
-									  swizzledSelector,
-									  method_getImplementation(originalMethod),
-									  method_getTypeEncoding(originalMethod));
-		} else {
-			method_exchangeImplementations(originalMethod, swizzledMethod);
-		}
+		NSLog(@"Manual Swizzling in root");
+		manualSwizzle([self class], @selector(printHello1), @selector(hpn_printHello1));
 	});
 }
 
 - (void)hpn_printHello1
 {
-	NSLog(@"Will print Hello1, but first, doing my thing.");
+	NSLog(@"Hello1, from Swizzling in root.");
 	[self hpn_printHello1];
+}
+
+@end
+
+
+
+@implementation HPNSimpleObjectChild1_M (ManualSwizzle)
+
++ (void)load
+{
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		NSLog(@"Manual Swizzling in child 1");
+		manualSwizzle([self class], @selector(printHello2), @selector(hpn1_printHello2));
+	});
+}
+
+- (void)hpn1_printHello2
+{
+	NSLog(@"Hello2, from Swizzling in child 1.");
+	[self hpn1_printHello2];
+}
+
+@end
+
+
+
+@implementation HPNSimpleObjectChild2_M (ManualSwizzle)
+
++ (void)load
+{
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		NSLog(@"Manual Swizzling in child 2");
+		manualSwizzle([self class], @selector(printHello2), @selector(hpn2_printHello2));
+	});
+}
+
+- (void)hpn2_printHello2
+{
+	NSLog(@"Hello2, from Swizzling in child 2.");
+	[self hpn2_printHello2];
 }
 
 @end

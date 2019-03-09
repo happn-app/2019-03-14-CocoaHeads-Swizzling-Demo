@@ -10,6 +10,8 @@
 
 @import Foundation;
 
+#import "HPNSimpleObject+ManualSwizzle.h"
+
 
 
 @implementation HPNSimpleObjectRoot_M
@@ -24,6 +26,11 @@
 	NSLog(@"Hello2 original implementation in root");
 }
 
+- (void)printHello3
+{
+	NSLog(@"Hello3 original implementation in root");
+}
+
 @end
 
 
@@ -35,3 +42,37 @@
 @implementation HPNSimpleObjectChild2_M
 
 @end
+
+
+@implementation HPNSimpleObjectChild3_M
+
+@end
+
+
+
+@implementation HPNSimpleObjectChild2_M (ManualSwizzle)
+
+- (void)hpn2_printHello3
+{
+	NSLog(@"Hello3, from Swizzling in child 2.");
+	[self hpn2_printHello3];
+}
+
+@end
+
+
+@implementation HPNSimpleObjectChild1_M (ManualSwizzle)
+
+- (void)hpn1_printHello3
+{
+	NSLog(@"Hello3, from Swizzling in child 1.");
+	[self hpn1_printHello3];
+}
+
+@end
+
+
+void manualSwizzleHello3(void) {
+	manualSwizzle([HPNSimpleObjectChild2_M class], @selector(printHello3), @selector(hpn2_printHello3));
+	manualSwizzle([HPNSimpleObjectChild1_M class], @selector(printHello3), @selector(hpn1_printHello3));
+}
