@@ -4,7 +4,7 @@
  *
  * Thank you https://stackoverflow.com/a/8636521/1152894
  * I had to enhance though (+load of categories is not always called after +load
- * of superclass's categories).
+ * of superclass’s categories).
  *
  * Created by François Lamboley on 2/25/14.
  * Copyright (c) 2014 FTW & Co. All rights reserved.
@@ -23,7 +23,10 @@ typedef IMP *IMPPointer;
 
 /* TODO: Extensive testing of these methods. */
 
-/* How to method-swizzle? Explanation by example:
+/* How to method-swizzle? Explanation by example below. Note the _absence_ of a
+ * dispatch_once in the +load method. While it wouldn’t specifically hurt, it is
+ * strictly speaking unneeded because +load is guaranteed to be thread-safe and
+ * reentrant (from https://stackoverflow.com/a/31737447/1152894).
  *
  *******************************************************************************
 @implementation NSView (MyViewAdditions)
