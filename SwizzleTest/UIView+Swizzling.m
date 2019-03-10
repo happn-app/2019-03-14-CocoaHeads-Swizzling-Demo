@@ -8,9 +8,10 @@
 
 #import "UIView+Swizzling.h"
 
+@import HPNSwizzling;
+
 #import "ManualSwizzle.h"
 #import "JRSwizzle.h"
-#import "NSObject+HPNSwizzling.h"
 
 
 

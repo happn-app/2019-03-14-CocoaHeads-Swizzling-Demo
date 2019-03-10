@@ -10,6 +10,7 @@
 
 @import Foundation;
 
+#import "ManualSwizzle.h"
 #import "HPNSimpleObject+ManualSwizzle.h"
 
 

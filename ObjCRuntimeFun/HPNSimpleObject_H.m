@@ -10,7 +10,7 @@
 
 @import Foundation;
 
-#import "NSObject+HPNSwizzling.h"
+@import HPNSwizzling;
 
 
 

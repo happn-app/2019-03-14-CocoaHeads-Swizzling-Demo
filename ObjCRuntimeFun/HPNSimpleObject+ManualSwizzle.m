@@ -8,6 +8,8 @@
 
 #import "HPNSimpleObject+ManualSwizzle.h"
 
+#import "ManualSwizzle.h"
+
 
 
 @implementation HPNSimpleObjectRoot_M (ManualSwizzle)
