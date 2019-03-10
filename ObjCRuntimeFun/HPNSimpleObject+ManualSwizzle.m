@@ -8,30 +8,6 @@
 
 #import "HPNSimpleObject+ManualSwizzle.h"
 
-@import ObjectiveC.runtime;
-
-
-
-void manualSwizzle(Class class, SEL originalSelector, SEL swizzledSelector) {
-	/* From https://nshipster.com/method-swizzling/ */
-	Method originalMethod = class_getInstanceMethod(class, originalSelector);
-	Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-	
-	BOOL didAddMethod =
-	class_addMethod(class,
-						 originalSelector,
-						 method_getImplementation(swizzledMethod),
-						 method_getTypeEncoding(swizzledMethod));
-	
-	if (didAddMethod) {
-		class_replaceMethod(class,
-								  swizzledSelector,
-								  method_getImplementation(originalMethod),
-								  method_getTypeEncoding(originalMethod));
-	} else {
-		method_exchangeImplementations(originalMethod, swizzledMethod);
-	}
-}
 
 
 @implementation HPNSimpleObjectRoot_M (ManualSwizzle)

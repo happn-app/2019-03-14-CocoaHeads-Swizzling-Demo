@@ -18,6 +18,8 @@
 		7B6080F222353CEE00751401 /* NSObject+HPNSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB682BC221C82740008DB37 /* NSObject+HPNSwizzling.m */; };
 		7B6080F322353CEE00751401 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6080D42234651600751401 /* JRSwizzle.m */; };
 		7B6080F622353D3A00751401 /* UIView+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6080F522353D3A00751401 /* UIView+Swizzling.m */; };
+		7B6080F8223553E500751401 /* ManualSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6080F7223553E500751401 /* ManualSwizzle.m */; };
+		7B6080F9223553E500751401 /* ManualSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6080F7223553E500751401 /* ManualSwizzle.m */; };
 		7BB682B3221C80E80008DB37 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB682B2221C80E80008DB37 /* main.swift */; };
 		7BB682BD221C82740008DB37 /* NSObject+HPNSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB682BC221C82740008DB37 /* NSObject+HPNSwizzling.m */; };
 		7BDFC217221CC45C00AB1EAB /* HPNSimpleObject_M.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */; };
@@ -52,6 +54,8 @@
 		7B6080EE22353CDF00751401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B6080F422353D3A00751401 /* UIView+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Swizzling.h"; sourceTree = "<group>"; };
 		7B6080F522353D3A00751401 /* UIView+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Swizzling.m"; sourceTree = "<group>"; };
+		7B6080F7223553E500751401 /* ManualSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManualSwizzle.m; sourceTree = "<group>"; };
+		7B6080FA223553F900751401 /* ManualSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManualSwizzle.h; sourceTree = "<group>"; };
 		7BB682AF221C80E70008DB37 /* ObjCRuntimeFun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjCRuntimeFun; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB682B2221C80E80008DB37 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7BB682BA221C82720008DB37 /* ObjCRuntimeFun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjCRuntimeFun-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 				7BB682BC221C82740008DB37 /* NSObject+HPNSwizzling.m */,
 				7B6080D32234651100751401 /* JRSwizzle.h */,
 				7B6080D42234651600751401 /* JRSwizzle.m */,
+				7B6080FA223553F900751401 /* ManualSwizzle.h */,
+				7B6080F7223553E500751401 /* ManualSwizzle.m */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 			files = (
 				7B6080F622353D3A00751401 /* UIView+Swizzling.m in Sources */,
 				7B6080E522353CDD00751401 /* ViewController.swift in Sources */,
+				7B6080F9223553E500751401 /* ManualSwizzle.m in Sources */,
 				7B6080F222353CEE00751401 /* NSObject+HPNSwizzling.m in Sources */,
 				7B6080F322353CEE00751401 /* JRSwizzle.m in Sources */,
 				7B6080E322353CDD00751401 /* AppDelegate.swift in Sources */,
@@ -258,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B6080F8223553E500751401 /* ManualSwizzle.m in Sources */,
 				7BDFC21B221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m in Sources */,
 				7BDFC217221CC45C00AB1EAB /* HPNSimpleObject_M.m in Sources */,
 				7BB682B3221C80E80008DB37 /* main.swift in Sources */,

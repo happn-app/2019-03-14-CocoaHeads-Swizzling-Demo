@@ -12,8 +12,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-void manualSwizzle(Class class, SEL originalSelector, SEL swizzledSelector);
-
 @interface HPNSimpleObjectRoot_M (ManualSwizzle)
 @end
 
