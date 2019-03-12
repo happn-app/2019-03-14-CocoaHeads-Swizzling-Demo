@@ -20,6 +20,7 @@ import eXtenderZ
 
 
 
+/* *** Standard isa-Swizzling *** */
 do {
 	let obj = HPNSimpleObject0()
 	obj.printHello()
@@ -29,6 +30,7 @@ do {
 }
 
 
+/* *** Standard isa-Swizzling *** */
 do {
 	HPNUtils.objc_try({
 		let obj = unsafeBitCast(NSObject(), to: NSNumber.self)
@@ -38,23 +40,23 @@ do {
 		
 		HPNCheckedAddExtender(obj, ext1)
 		let a1 = obj.decimalValue
-		print("yolo: \(a1)")
+		NSLog("%@", "yolo: \(a1)")
 		
 		HPNCheckedAddExtender(obj, ext2)
 		let a2 = obj.decimalValue
-		print("yolo: \(a2)")
+		NSLog("%@", "yolo: \(a2)")
 		
 		obj.hpn_remove(ext1)
 		let a3 = obj.decimalValue
-		print("yolo: \(a3)")
+		NSLog("%@", "yolo: \(a3)")
 		
 		obj.hpn_remove(ext2)
 		HPNCheckedAddExtender(obj, ObjectExtender(forwardObject: NSNull()))
 		let a4 = obj.decimalValue
-		print("yolo: \(a4)")
+		NSLog("%@", "yolo: \(a4)")
 	}, catch: { e in
-		print("Got an exception: \(e)")
+		NSLog("%@", "Got an exception: \(e)")
 	})
 }
 
-print("THE END")
+NSLog("THE END")
