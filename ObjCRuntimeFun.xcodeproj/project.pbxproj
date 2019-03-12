@@ -27,6 +27,7 @@
 		7BC0AFD32235D73300EF4920 /* HPNSwizzling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC0AFC92235D71400EF4920 /* HPNSwizzling.framework */; };
 		7BC0AFD42235D73300EF4920 /* HPNSwizzling.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC0AFC92235D71400EF4920 /* HPNSwizzling.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7BD029FE2237FB2C00794AA5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD029FD2237FB2C00794AA5 /* main.swift */; };
+		7BD02A082238025500794AA5 /* HPNSimpleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD02A072238025500794AA5 /* HPNSimpleObject.m */; };
 		7BDFC217221CC45C00AB1EAB /* HPNSimpleObject_M.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */; };
 		7BDFC21B221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC21A221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,9 @@
 		7BD029FB2237FB2B00794AA5 /* IsaSwizzlingInCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IsaSwizzlingInCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD029FD2237FB2C00794AA5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7BD02A042237FC0300794AA5 /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		7BD02A052238025400794AA5 /* IsaSwizzlingInCLI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IsaSwizzlingInCLI-Bridging-Header.h"; sourceTree = "<group>"; };
+		7BD02A062238025500794AA5 /* HPNSimpleObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNSimpleObject.h; sourceTree = "<group>"; };
+		7BD02A072238025500794AA5 /* HPNSimpleObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPNSimpleObject.m; sourceTree = "<group>"; };
 		7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPNSimpleObject_M.m; sourceTree = "<group>"; };
 		7BDFC218221CC48700AB1EAB /* HPNSimpleObject_M.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNSimpleObject_M.h; sourceTree = "<group>"; };
 		7BDFC219221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HPNSimpleObject+ManualSwizzle.h"; sourceTree = "<group>"; };
@@ -226,6 +230,9 @@
 			isa = PBXGroup;
 			children = (
 				7BD029FD2237FB2C00794AA5 /* main.swift */,
+				7BD02A062238025500794AA5 /* HPNSimpleObject.h */,
+				7BD02A072238025500794AA5 /* HPNSimpleObject.m */,
+				7BD02A052238025400794AA5 /* IsaSwizzlingInCLI-Bridging-Header.h */,
 			);
 			path = IsaSwizzlingInCLI;
 			sourceTree = "<group>";
@@ -304,6 +311,7 @@
 					};
 					7BD029FA2237FB2B00794AA5 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -372,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD029FE2237FB2C00794AA5 /* main.swift in Sources */,
+				7BD02A082238025500794AA5 /* HPNSimpleObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,8 +618,16 @@
 		7BD029FF2237FB2C00794AA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IsaSwizzlingInCLI/IsaSwizzlingInCLI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -618,8 +635,15 @@
 		7BD02A002237FB2C00794AA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IsaSwizzlingInCLI/IsaSwizzlingInCLI-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

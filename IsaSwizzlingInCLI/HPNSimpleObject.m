@@ -13,15 +13,25 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-import Foundation
-import ObjectiveC.runtime
+#import "HPNSimpleObject.h"
 
 
 
-do {
-	let obj = HPNSimpleObject0()
-	obj.printHello()
-	
-	object_setClass(obj, HPNSimpleObject1.self)
-	obj.printHello()
+@implementation HPNSimpleObject0
+
+- (void)printHello
+{
+	NSLog(@"Hello");
 }
+
+@end
+
+
+@implementation HPNSimpleObject1
+
+- (void)printHello
+{
+	NSLog(@"Bonjour");
+}
+
+@end

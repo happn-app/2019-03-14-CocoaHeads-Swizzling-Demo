@@ -13,15 +13,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-import Foundation
-import ObjectiveC.runtime
+/*
+ * Use this file to import your target's public headers that you would like to expose to Swift.
+ */
 
-
-
-do {
-	let obj = HPNSimpleObject0()
-	obj.printHello()
-	
-	object_setClass(obj, HPNSimpleObject1.self)
-	obj.printHello()
-}
+#import "HPNSimpleObject.h"
