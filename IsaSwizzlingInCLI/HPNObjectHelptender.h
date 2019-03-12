@@ -13,11 +13,25 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-/*
- * Use this file to import your target's public headers that you would like to expose to Swift.
- */
+@import Foundation;
 
 #import "HPNSimpleObject.h"
-#import "HPNObjectHelptender.h"
 
-#import "ExceptionCatchingInSwift.h"
+@import eXtenderZ;
+
+
+
+NS_ASSUME_NONNULL_BEGIN
+
+@protocol HPNObjectExtender <HPNExtender>
+
+- (nullable id)forwardObjectForUnknownSelector:(SEL)aSelector of:(NSObject *)obj;
+
+@end
+
+
+@interface HPNObjectHelptender : NSObject <HPNHelptender>
+
+@end
+
+NS_ASSUME_NONNULL_END

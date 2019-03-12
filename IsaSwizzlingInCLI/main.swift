@@ -16,6 +16,8 @@ limitations under the License. */
 import Foundation
 import ObjectiveC.runtime
 
+import eXtenderZ
+
 
 
 do {
@@ -25,3 +27,34 @@ do {
 	object_setClass(obj, HPNSimpleObject1.self)
 	obj.printHello()
 }
+
+
+do {
+	HPNUtils.objc_try({
+		let obj = unsafeBitCast(NSObject(), to: NSNumber.self)
+		
+		let ext1 = ObjectExtender(forwardObject: NSNumber(value: 42))
+		let ext2 = ObjectExtender(forwardObject: NSNumber(value: 21))
+		
+		HPNCheckedAddExtender(obj, ext1)
+		let a1 = obj.decimalValue
+		print("yolo: \(a1)")
+		
+		HPNCheckedAddExtender(obj, ext2)
+		let a2 = obj.decimalValue
+		print("yolo: \(a2)")
+		
+		obj.hpn_remove(ext1)
+		let a3 = obj.decimalValue
+		print("yolo: \(a3)")
+		
+		obj.hpn_remove(ext2)
+		HPNCheckedAddExtender(obj, ObjectExtender(forwardObject: NSNull()))
+		let a4 = obj.decimalValue
+		print("yolo: \(a4)")
+	}, catch: { e in
+		print("Got an exception: \(e)")
+	})
+}
+
+print("THE END")
