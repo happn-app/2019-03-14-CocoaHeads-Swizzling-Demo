@@ -26,6 +26,7 @@
 		7BC0AFD22235D73300EF4920 /* eXtenderZ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC0AFCA2235D71400EF4920 /* eXtenderZ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7BC0AFD32235D73300EF4920 /* HPNSwizzling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC0AFC92235D71400EF4920 /* HPNSwizzling.framework */; };
 		7BC0AFD42235D73300EF4920 /* HPNSwizzling.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC0AFC92235D71400EF4920 /* HPNSwizzling.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7BD029FE2237FB2C00794AA5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD029FD2237FB2C00794AA5 /* main.swift */; };
 		7BDFC217221CC45C00AB1EAB /* HPNSimpleObject_M.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */; };
 		7BDFC21B221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC21A221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,15 @@
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD029F92237FB2B00794AA5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -79,6 +89,8 @@
 		7BC0AFCA2235D71400EF4920 /* eXtenderZ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eXtenderZ.framework; sourceTree = "<group>"; };
 		7BC0AFCD2235D72400EF4920 /* eXtenderZ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eXtenderZ.framework; sourceTree = "<group>"; };
 		7BC0AFCE2235D72400EF4920 /* HPNSwizzling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HPNSwizzling.framework; sourceTree = "<group>"; };
+		7BD029FB2237FB2B00794AA5 /* IsaSwizzlingInCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IsaSwizzlingInCLI; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD029FD2237FB2C00794AA5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPNSimpleObject_M.m; sourceTree = "<group>"; };
 		7BDFC218221CC48700AB1EAB /* HPNSimpleObject_M.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNSimpleObject_M.h; sourceTree = "<group>"; };
 		7BDFC219221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HPNSimpleObject+ManualSwizzle.h"; sourceTree = "<group>"; };
@@ -101,6 +113,13 @@
 			files = (
 				7BC0AFCF2235D72400EF4920 /* eXtenderZ.framework in Frameworks */,
 				7BC0AFD02235D72400EF4920 /* HPNSwizzling.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD029F82237FB2B00794AA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +146,7 @@
 			children = (
 				7BB682B1221C80E70008DB37 /* MethodSwizzlingInCLI */,
 				7B6080E122353CDD00751401 /* MethodSwizzlingIniOS */,
+				7BD029FC2237FB2C00794AA5 /* IsaSwizzlingInCLI */,
 				7BB682B9221C82390008DB37 /* Dependencies */,
 				7BC0AFC62235D67F00EF4920 /* Carthage */,
 				7BB682B0221C80E70008DB37 /* Products */,
@@ -138,6 +158,7 @@
 			children = (
 				7BB682AF221C80E70008DB37 /* MethodSwizzlingInCLI */,
 				7B6080E022353CDC00751401 /* MethodSwizzlingIniOS.app */,
+				7BD029FB2237FB2B00794AA5 /* IsaSwizzlingInCLI */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +220,14 @@
 			path = Mac/Static;
 			sourceTree = "<group>";
 		};
+		7BD029FC2237FB2C00794AA5 /* IsaSwizzlingInCLI */ = {
+			isa = PBXGroup;
+			children = (
+				7BD029FD2237FB2C00794AA5 /* main.swift */,
+			);
+			path = IsaSwizzlingInCLI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,6 +266,23 @@
 			productReference = 7BB682AF221C80E70008DB37 /* MethodSwizzlingInCLI */;
 			productType = "com.apple.product-type.tool";
 		};
+		7BD029FA2237FB2B00794AA5 /* IsaSwizzlingInCLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BD02A012237FB2C00794AA5 /* Build configuration list for PBXNativeTarget "IsaSwizzlingInCLI" */;
+			buildPhases = (
+				7BD029F72237FB2B00794AA5 /* Sources */,
+				7BD029F82237FB2B00794AA5 /* Frameworks */,
+				7BD029F92237FB2B00794AA5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IsaSwizzlingInCLI;
+			productName = IsaSwizzlingInCLI;
+			productReference = 7BD029FB2237FB2B00794AA5 /* IsaSwizzlingInCLI */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -253,6 +299,9 @@
 					7BB682AE221C80E70008DB37 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
+					};
+					7BD029FA2237FB2B00794AA5 = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -271,6 +320,7 @@
 			targets = (
 				7BB682AE221C80E70008DB37 /* MethodSwizzlingInCLI */,
 				7B6080DF22353CDC00751401 /* MethodSwizzlingIniOS */,
+				7BD029FA2237FB2B00794AA5 /* IsaSwizzlingInCLI */,
 			);
 		};
 /* End PBXProject section */
@@ -312,6 +362,14 @@
 				7B6080DA223483F900751401 /* HPNSimpleObject_J.m in Sources */,
 				7B6080D52234651600751401 /* JRSwizzle.m in Sources */,
 				7B6080DB223483F900751401 /* HPNSimpleObject_H.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD029F72237FB2B00794AA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD029FE2237FB2C00794AA5 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +604,24 @@
 			};
 			name = Release;
 		};
+		7BD029FF2237FB2C00794AA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		7BD02A002237FB2C00794AA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,6 +648,15 @@
 			buildConfigurations = (
 				7BB682B7221C80E80008DB37 /* Debug */,
 				7BB682B8221C80E80008DB37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BD02A012237FB2C00794AA5 /* Build configuration list for PBXNativeTarget "IsaSwizzlingInCLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD029FF2237FB2C00794AA5 /* Debug */,
+				7BD02A002237FB2C00794AA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
