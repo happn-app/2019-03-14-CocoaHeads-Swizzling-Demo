@@ -13,18 +13,25 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-import UIKit
+@import Foundation;
+@import UIKit;
 
-import eXtenderZ
+@import eXtenderZ;
 
 
 
-class ViewController : UITableViewController {
+NS_ASSUME_NONNULL_BEGIN
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		HPNCheckedAddExtender(tableView, CustomCancellableTouchesSVE())
-	}
+@protocol HPNScrollViewExtender <HPNExtender>
+@optional
 
-}
+- (BOOL)scrollView:(UIScrollView *)scrollView touchesShouldCancelInContentView:(UIView *)view;
+
+@end
+
+
+@interface HPNScrollViewHelptender : UIScrollView <HPNHelptender>
+
+@end
+
+NS_ASSUME_NONNULL_END

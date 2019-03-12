@@ -36,6 +36,8 @@
 		7BD02A4222386AEF00794AA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD02A4022386AEF00794AA5 /* LaunchScreen.storyboard */; };
 		7BD02A4722386B0500794AA5 /* eXtenderZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC0AFCA2235D71400EF4920 /* eXtenderZ.framework */; };
 		7BD02A4822386B0500794AA5 /* eXtenderZ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC0AFCA2235D71400EF4920 /* eXtenderZ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7BD02A4D22386EDB00794AA5 /* HPNScrollViewHelptender.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD02A4C22386EDB00794AA5 /* HPNScrollViewHelptender.m */; };
+		7BD02A4F2238727000794AA5 /* CustomCancellableTouchesSVE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD02A4E2238727000794AA5 /* CustomCancellableTouchesSVE.swift */; };
 		7BDFC217221CC45C00AB1EAB /* HPNSimpleObject_M.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */; };
 		7BDFC21B221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC21A221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m */; };
 /* End PBXBuildFile section */
@@ -126,6 +128,10 @@
 		7BD02A3E22386AEF00794AA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BD02A4122386AEF00794AA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BD02A4322386AEF00794AA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BD02A4A22386EDA00794AA5 /* IsaSwizzlingIniOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IsaSwizzlingIniOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		7BD02A4B22386EDB00794AA5 /* HPNScrollViewHelptender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNScrollViewHelptender.h; sourceTree = "<group>"; };
+		7BD02A4C22386EDB00794AA5 /* HPNScrollViewHelptender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPNScrollViewHelptender.m; sourceTree = "<group>"; };
+		7BD02A4E2238727000794AA5 /* CustomCancellableTouchesSVE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCancellableTouchesSVE.swift; sourceTree = "<group>"; };
 		7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPNSimpleObject_M.m; sourceTree = "<group>"; };
 		7BDFC218221CC48700AB1EAB /* HPNSimpleObject_M.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNSimpleObject_M.h; sourceTree = "<group>"; };
 		7BDFC219221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HPNSimpleObject+ManualSwizzle.h"; sourceTree = "<group>"; };
@@ -286,10 +292,14 @@
 			children = (
 				7BD02A3722386AEE00794AA5 /* AppDelegate.swift */,
 				7BD02A3922386AEE00794AA5 /* ViewController.swift */,
+				7BD02A4B22386EDB00794AA5 /* HPNScrollViewHelptender.h */,
+				7BD02A4C22386EDB00794AA5 /* HPNScrollViewHelptender.m */,
+				7BD02A4E2238727000794AA5 /* CustomCancellableTouchesSVE.swift */,
 				7BD02A3B22386AEE00794AA5 /* Main.storyboard */,
 				7BD02A3E22386AEF00794AA5 /* Assets.xcassets */,
 				7BD02A4022386AEF00794AA5 /* LaunchScreen.storyboard */,
 				7BD02A4322386AEF00794AA5 /* Info.plist */,
+				7BD02A4A22386EDA00794AA5 /* IsaSwizzlingIniOS-Bridging-Header.h */,
 			);
 			path = IsaSwizzlingIniOS;
 			sourceTree = "<group>";
@@ -390,6 +400,7 @@
 					};
 					7BD02A3422386AED00794AA5 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -481,6 +492,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD02A3A22386AEE00794AA5 /* ViewController.swift in Sources */,
+				7BD02A4D22386EDB00794AA5 /* HPNScrollViewHelptender.m in Sources */,
+				7BD02A4F2238727000794AA5 /* CustomCancellableTouchesSVE.swift in Sources */,
 				7BD02A3822386AEE00794AA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,6 +792,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -794,6 +808,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.frizlab.IsaSwizzlingIniOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "IsaSwizzlingIniOS/IsaSwizzlingIniOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -803,6 +819,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -818,6 +835,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.frizlab.IsaSwizzlingIniOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "IsaSwizzlingIniOS/IsaSwizzlingIniOS-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

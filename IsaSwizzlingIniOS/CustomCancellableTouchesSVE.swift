@@ -13,18 +13,23 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-import UIKit
-
-import eXtenderZ
+import Foundation
 
 
 
-class ViewController : UITableViewController {
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		HPNCheckedAddExtender(tableView, CustomCancellableTouchesSVE())
+class CustomCancellableTouchesSVE : NSObject, HPNScrollViewExtender {
+	
+	func prepareObject(forExtender object: NSObject) -> Bool {
+		/* Nothing to do */
+		return true
 	}
-
+	
+	func prepareObjectForRemoval(ofExtender object: NSObject) {
+		/* Nothing to do */
+	}
+	
+	func scrollView(_ scrollView: UIScrollView, touchesShouldCancelInContentView view: UIView) -> Bool {
+		return true
+	}
+	
 }

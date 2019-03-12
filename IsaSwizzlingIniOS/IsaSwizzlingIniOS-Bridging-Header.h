@@ -13,18 +13,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-import UIKit
+/*
+ * Use this file to import your target's public headers that you would like to expose to Swift.
+ */
 
-import eXtenderZ
-
-
-
-class ViewController : UITableViewController {
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		HPNCheckedAddExtender(tableView, CustomCancellableTouchesSVE())
-	}
-
-}
+#import "HPNScrollViewHelptender.h"
