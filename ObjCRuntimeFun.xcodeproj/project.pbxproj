@@ -29,6 +29,13 @@
 		7BD02A0D2238058400794AA5 /* eXtenderZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC0AFCD2235D72400EF4920 /* eXtenderZ.framework */; };
 		7BD02A102238101A00794AA5 /* ExceptionCatchingInSwift.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD02A0E2238101A00794AA5 /* ExceptionCatchingInSwift.m */; };
 		7BD02A122238126300794AA5 /* ObjectExtenders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD02A112238126300794AA5 /* ObjectExtenders.swift */; };
+		7BD02A3822386AEE00794AA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD02A3722386AEE00794AA5 /* AppDelegate.swift */; };
+		7BD02A3A22386AEE00794AA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD02A3922386AEE00794AA5 /* ViewController.swift */; };
+		7BD02A3D22386AEE00794AA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD02A3B22386AEE00794AA5 /* Main.storyboard */; };
+		7BD02A3F22386AEF00794AA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD02A3E22386AEF00794AA5 /* Assets.xcassets */; };
+		7BD02A4222386AEF00794AA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD02A4022386AEF00794AA5 /* LaunchScreen.storyboard */; };
+		7BD02A4722386B0500794AA5 /* eXtenderZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC0AFCA2235D71400EF4920 /* eXtenderZ.framework */; };
+		7BD02A4822386B0500794AA5 /* eXtenderZ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC0AFCA2235D71400EF4920 /* eXtenderZ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7BDFC217221CC45C00AB1EAB /* HPNSimpleObject_M.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */; };
 		7BDFC21B221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFC21A221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m */; };
 /* End PBXBuildFile section */
@@ -62,6 +69,17 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		7BD02A4922386B0500794AA5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7BD02A4822386B0500794AA5 /* eXtenderZ.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -101,6 +119,13 @@
 		7BD02A0E2238101A00794AA5 /* ExceptionCatchingInSwift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExceptionCatchingInSwift.m; sourceTree = "<group>"; };
 		7BD02A0F2238101A00794AA5 /* ExceptionCatchingInSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExceptionCatchingInSwift.h; sourceTree = "<group>"; };
 		7BD02A112238126300794AA5 /* ObjectExtenders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectExtenders.swift; sourceTree = "<group>"; };
+		7BD02A3522386AED00794AA5 /* IsaSwizzlingIniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IsaSwizzlingIniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD02A3722386AEE00794AA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BD02A3922386AEE00794AA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7BD02A3C22386AEE00794AA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7BD02A3E22386AEF00794AA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BD02A4122386AEF00794AA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7BD02A4322386AEF00794AA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPNSimpleObject_M.m; sourceTree = "<group>"; };
 		7BDFC218221CC48700AB1EAB /* HPNSimpleObject_M.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNSimpleObject_M.h; sourceTree = "<group>"; };
 		7BDFC219221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HPNSimpleObject+ManualSwizzle.h"; sourceTree = "<group>"; };
@@ -132,6 +157,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7BD02A3222386AED00794AA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD02A4722386B0500794AA5 /* eXtenderZ.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -157,6 +190,7 @@
 				7BB682B1221C80E70008DB37 /* MethodSwizzlingInCLI */,
 				7B6080E122353CDD00751401 /* MethodSwizzlingIniOS */,
 				7BD029FC2237FB2C00794AA5 /* IsaSwizzlingInCLI */,
+				7BD02A3622386AEE00794AA5 /* IsaSwizzlingIniOS */,
 				7BB682B9221C82390008DB37 /* Dependencies */,
 				7BC0AFC62235D67F00EF4920 /* Carthage */,
 				7BB682B0221C80E70008DB37 /* Products */,
@@ -169,6 +203,7 @@
 				7BB682AF221C80E70008DB37 /* MethodSwizzlingInCLI */,
 				7B6080E022353CDC00751401 /* MethodSwizzlingIniOS.app */,
 				7BD029FB2237FB2B00794AA5 /* IsaSwizzlingInCLI */,
+				7BD02A3522386AED00794AA5 /* IsaSwizzlingIniOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,6 +281,19 @@
 			path = IsaSwizzlingInCLI;
 			sourceTree = "<group>";
 		};
+		7BD02A3622386AEE00794AA5 /* IsaSwizzlingIniOS */ = {
+			isa = PBXGroup;
+			children = (
+				7BD02A3722386AEE00794AA5 /* AppDelegate.swift */,
+				7BD02A3922386AEE00794AA5 /* ViewController.swift */,
+				7BD02A3B22386AEE00794AA5 /* Main.storyboard */,
+				7BD02A3E22386AEF00794AA5 /* Assets.xcassets */,
+				7BD02A4022386AEF00794AA5 /* LaunchScreen.storyboard */,
+				7BD02A4322386AEF00794AA5 /* Info.plist */,
+			);
+			path = IsaSwizzlingIniOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -301,6 +349,24 @@
 			productReference = 7BD029FB2237FB2B00794AA5 /* IsaSwizzlingInCLI */;
 			productType = "com.apple.product-type.tool";
 		};
+		7BD02A3422386AED00794AA5 /* IsaSwizzlingIniOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BD02A4422386AEF00794AA5 /* Build configuration list for PBXNativeTarget "IsaSwizzlingIniOS" */;
+			buildPhases = (
+				7BD02A3122386AED00794AA5 /* Sources */,
+				7BD02A3222386AED00794AA5 /* Frameworks */,
+				7BD02A3322386AED00794AA5 /* Resources */,
+				7BD02A4922386B0500794AA5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IsaSwizzlingIniOS;
+			productName = IsaSwizzlingIniOS;
+			productReference = 7BD02A3522386AED00794AA5 /* IsaSwizzlingIniOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -322,6 +388,9 @@
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
 					};
+					7BD02A3422386AED00794AA5 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 7BB682AA221C80E70008DB37 /* Build configuration list for PBXProject "ObjCRuntimeFun" */;
@@ -340,6 +409,7 @@
 				7BB682AE221C80E70008DB37 /* MethodSwizzlingInCLI */,
 				7B6080DF22353CDC00751401 /* MethodSwizzlingIniOS */,
 				7BD029FA2237FB2B00794AA5 /* IsaSwizzlingInCLI */,
+				7BD02A3422386AED00794AA5 /* IsaSwizzlingIniOS */,
 			);
 		};
 /* End PBXProject section */
@@ -352,6 +422,16 @@
 				7B6080ED22353CDF00751401 /* LaunchScreen.storyboard in Resources */,
 				7B6080EA22353CDF00751401 /* Assets.xcassets in Resources */,
 				7B6080E822353CDD00751401 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD02A3322386AED00794AA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD02A4222386AEF00794AA5 /* LaunchScreen.storyboard in Resources */,
+				7BD02A3F22386AEF00794AA5 /* Assets.xcassets in Resources */,
+				7BD02A3D22386AEE00794AA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +476,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7BD02A3122386AED00794AA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD02A3A22386AEE00794AA5 /* ViewController.swift in Sources */,
+				7BD02A3822386AEE00794AA5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -411,6 +500,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				7B6080EC22353CDF00751401 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7BD02A3B22386AEE00794AA5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BD02A3C22386AEE00794AA5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7BD02A4022386AEF00794AA5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BD02A4122386AEF00794AA5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -670,6 +775,55 @@
 			};
 			name = Release;
 		};
+		7BD02A4522386AEF00794AA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = IsaSwizzlingIniOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.frizlab.IsaSwizzlingIniOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BD02A4622386AEF00794AA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = IsaSwizzlingIniOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.frizlab.IsaSwizzlingIniOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -705,6 +859,15 @@
 			buildConfigurations = (
 				7BD029FF2237FB2C00794AA5 /* Debug */,
 				7BD02A002237FB2C00794AA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BD02A4422386AEF00794AA5 /* Build configuration list for PBXNativeTarget "IsaSwizzlingIniOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD02A4522386AEF00794AA5 /* Debug */,
+				7BD02A4622386AEF00794AA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
