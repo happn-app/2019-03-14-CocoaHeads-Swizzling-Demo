@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7BB682AE221C80E70008DB37"
-               BuildableName = "ObjCRuntimeFun"
-               BlueprintName = "ObjCRuntimeFun"
+               BlueprintIdentifier = "7B6080DF22353CDC00751401"
+               BuildableName = "MethodSwizzlingIniOS.app"
+               BlueprintName = "MethodSwizzlingIniOS"
                ReferencedContainer = "container:ObjCRuntimeFun.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7BB682AE221C80E70008DB37"
-            BuildableName = "ObjCRuntimeFun"
-            BlueprintName = "ObjCRuntimeFun"
+            BlueprintIdentifier = "7B6080DF22353CDC00751401"
+            BuildableName = "MethodSwizzlingIniOS.app"
+            BlueprintName = "MethodSwizzlingIniOS"
             ReferencedContainer = "container:ObjCRuntimeFun.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7BB682AE221C80E70008DB37"
-            BuildableName = "ObjCRuntimeFun"
-            BlueprintName = "ObjCRuntimeFun"
+            BlueprintIdentifier = "7B6080DF22353CDC00751401"
+            BuildableName = "MethodSwizzlingIniOS.app"
+            BlueprintName = "MethodSwizzlingIniOS"
             ReferencedContainer = "container:ObjCRuntimeFun.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7BB682AE221C80E70008DB37"
-            BuildableName = "ObjCRuntimeFun"
-            BlueprintName = "ObjCRuntimeFun"
+            BlueprintIdentifier = "7B6080DF22353CDC00751401"
+            BuildableName = "MethodSwizzlingIniOS.app"
+            BlueprintName = "MethodSwizzlingIniOS"
             ReferencedContainer = "container:ObjCRuntimeFun.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

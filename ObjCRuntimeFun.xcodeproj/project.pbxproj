@@ -61,7 +61,7 @@
 		7B6080D7223483F900751401 /* HPNSimpleObject_J.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPNSimpleObject_J.m; sourceTree = "<group>"; };
 		7B6080D8223483F900751401 /* HPNSimpleObject_H.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPNSimpleObject_H.h; sourceTree = "<group>"; };
 		7B6080D9223483F900751401 /* HPNSimpleObject_H.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPNSimpleObject_H.m; sourceTree = "<group>"; };
-		7B6080E022353CDC00751401 /* SwizzleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwizzleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B6080E022353CDC00751401 /* MethodSwizzlingIniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MethodSwizzlingIniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B6080E222353CDD00751401 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B6080E422353CDD00751401 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7B6080E722353CDD00751401 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,9 +72,9 @@
 		7B6080F522353D3A00751401 /* UIView+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Swizzling.m"; sourceTree = "<group>"; };
 		7B6080F7223553E500751401 /* ManualSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManualSwizzle.m; sourceTree = "<group>"; };
 		7B6080FA223553F900751401 /* ManualSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManualSwizzle.h; sourceTree = "<group>"; };
-		7BB682AF221C80E70008DB37 /* ObjCRuntimeFun */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjCRuntimeFun; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BB682AF221C80E70008DB37 /* MethodSwizzlingInCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MethodSwizzlingInCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB682B2221C80E80008DB37 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		7BB682BA221C82720008DB37 /* ObjCRuntimeFun-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjCRuntimeFun-Bridging-Header.h"; sourceTree = "<group>"; };
+		7BB682BA221C82720008DB37 /* MethodSwizzlingInCLI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MethodSwizzlingInCLI-Bridging-Header.h"; sourceTree = "<group>"; };
 		7BC0AFC92235D71400EF4920 /* HPNSwizzling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HPNSwizzling.framework; sourceTree = "<group>"; };
 		7BC0AFCA2235D71400EF4920 /* eXtenderZ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eXtenderZ.framework; sourceTree = "<group>"; };
 		7BC0AFCD2235D72400EF4920 /* eXtenderZ.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = eXtenderZ.framework; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7B6080E122353CDD00751401 /* SwizzleTest */ = {
+		7B6080E122353CDD00751401 /* MethodSwizzlingIniOS */ = {
 			isa = PBXGroup;
 			children = (
 				7B6080E222353CDD00751401 /* AppDelegate.swift */,
@@ -119,17 +119,16 @@
 				7B6080EB22353CDF00751401 /* LaunchScreen.storyboard */,
 				7B6080EE22353CDF00751401 /* Info.plist */,
 			);
-			path = SwizzleTest;
+			path = MethodSwizzlingIniOS;
 			sourceTree = "<group>";
 		};
 		7BB682A6221C80E70008DB37 = {
 			isa = PBXGroup;
 			children = (
-				7BB682B1221C80E70008DB37 /* ObjCRuntimeFun */,
-				7B6080E122353CDD00751401 /* SwizzleTest */,
+				7BB682B1221C80E70008DB37 /* MethodSwizzlingInCLI */,
+				7B6080E122353CDD00751401 /* MethodSwizzlingIniOS */,
 				7BB682B9221C82390008DB37 /* Dependencies */,
 				7BC0AFC62235D67F00EF4920 /* Carthage */,
-				7BB682BE221C82820008DB37 /* Supporting Files */,
 				7BB682B0221C80E70008DB37 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,13 +136,13 @@
 		7BB682B0221C80E70008DB37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7BB682AF221C80E70008DB37 /* ObjCRuntimeFun */,
-				7B6080E022353CDC00751401 /* SwizzleTest.app */,
+				7BB682AF221C80E70008DB37 /* MethodSwizzlingInCLI */,
+				7B6080E022353CDC00751401 /* MethodSwizzlingIniOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7BB682B1221C80E70008DB37 /* ObjCRuntimeFun */ = {
+		7BB682B1221C80E70008DB37 /* MethodSwizzlingInCLI */ = {
 			isa = PBXGroup;
 			children = (
 				7BB682B2221C80E80008DB37 /* main.swift */,
@@ -155,8 +154,9 @@
 				7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */,
 				7BDFC219221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.h */,
 				7BDFC21A221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m */,
+				7BB682BA221C82720008DB37 /* MethodSwizzlingInCLI-Bridging-Header.h */,
 			);
-			path = ObjCRuntimeFun;
+			path = MethodSwizzlingInCLI;
 			sourceTree = "<group>";
 		};
 		7BB682B9221C82390008DB37 /* Dependencies */ = {
@@ -168,14 +168,6 @@
 				7B6080F7223553E500751401 /* ManualSwizzle.m */,
 			);
 			path = Dependencies;
-			sourceTree = "<group>";
-		};
-		7BB682BE221C82820008DB37 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7BB682BA221C82720008DB37 /* ObjCRuntimeFun-Bridging-Header.h */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		7BC0AFC62235D67F00EF4920 /* Carthage */ = {
@@ -210,9 +202,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7B6080DF22353CDC00751401 /* SwizzleTest */ = {
+		7B6080DF22353CDC00751401 /* MethodSwizzlingIniOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B6080EF22353CDF00751401 /* Build configuration list for PBXNativeTarget "SwizzleTest" */;
+			buildConfigurationList = 7B6080EF22353CDF00751401 /* Build configuration list for PBXNativeTarget "MethodSwizzlingIniOS" */;
 			buildPhases = (
 				7B6080DC22353CDC00751401 /* Sources */,
 				7B6080DD22353CDC00751401 /* Frameworks */,
@@ -223,14 +215,14 @@
 			);
 			dependencies = (
 			);
-			name = SwizzleTest;
+			name = MethodSwizzlingIniOS;
 			productName = SwizzleTest;
-			productReference = 7B6080E022353CDC00751401 /* SwizzleTest.app */;
+			productReference = 7B6080E022353CDC00751401 /* MethodSwizzlingIniOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7BB682AE221C80E70008DB37 /* ObjCRuntimeFun */ = {
+		7BB682AE221C80E70008DB37 /* MethodSwizzlingInCLI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BB682B6221C80E80008DB37 /* Build configuration list for PBXNativeTarget "ObjCRuntimeFun" */;
+			buildConfigurationList = 7BB682B6221C80E80008DB37 /* Build configuration list for PBXNativeTarget "MethodSwizzlingInCLI" */;
 			buildPhases = (
 				7BB682AB221C80E70008DB37 /* Sources */,
 				7BB682AC221C80E70008DB37 /* Frameworks */,
@@ -240,9 +232,9 @@
 			);
 			dependencies = (
 			);
-			name = ObjCRuntimeFun;
+			name = MethodSwizzlingInCLI;
 			productName = ObjCRuntimeFun;
-			productReference = 7BB682AF221C80E70008DB37 /* ObjCRuntimeFun */;
+			productReference = 7BB682AF221C80E70008DB37 /* MethodSwizzlingInCLI */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -277,8 +269,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7BB682AE221C80E70008DB37 /* ObjCRuntimeFun */,
-				7B6080DF22353CDC00751401 /* SwizzleTest */,
+				7BB682AE221C80E70008DB37 /* MethodSwizzlingInCLI */,
+				7B6080DF22353CDC00751401 /* MethodSwizzlingIniOS */,
 			);
 		};
 /* End PBXProject section */
@@ -355,7 +347,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = SwizzleTest/Info.plist;
+				INFOPLIST_FILE = MethodSwizzlingIniOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,7 +371,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = SwizzleTest/Info.plist;
+				INFOPLIST_FILE = MethodSwizzlingIniOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -527,7 +519,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/ObjCRuntimeFun-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MethodSwizzlingInCLI/MethodSwizzlingInCLI-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
@@ -549,7 +541,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/ObjCRuntimeFun-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MethodSwizzlingInCLI/MethodSwizzlingInCLI-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -557,7 +549,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7B6080EF22353CDF00751401 /* Build configuration list for PBXNativeTarget "SwizzleTest" */ = {
+		7B6080EF22353CDF00751401 /* Build configuration list for PBXNativeTarget "MethodSwizzlingIniOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B6080F022353CDF00751401 /* Debug */,
@@ -575,7 +567,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BB682B6221C80E80008DB37 /* Build configuration list for PBXNativeTarget "ObjCRuntimeFun" */ = {
+		7BB682B6221C80E80008DB37 /* Build configuration list for PBXNativeTarget "MethodSwizzlingInCLI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BB682B7221C80E80008DB37 /* Debug */,
