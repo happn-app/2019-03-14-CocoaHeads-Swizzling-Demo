@@ -91,6 +91,7 @@
 		7BC0AFCE2235D72400EF4920 /* HPNSwizzling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HPNSwizzling.framework; sourceTree = "<group>"; };
 		7BD029FB2237FB2B00794AA5 /* IsaSwizzlingInCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IsaSwizzlingInCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD029FD2237FB2C00794AA5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7BD02A042237FC0300794AA5 /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		7BDFC216221CC45C00AB1EAB /* HPNSimpleObject_M.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPNSimpleObject_M.m; sourceTree = "<group>"; };
 		7BDFC218221CC48700AB1EAB /* HPNSimpleObject_M.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNSimpleObject_M.h; sourceTree = "<group>"; };
 		7BDFC219221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HPNSimpleObject+ManualSwizzle.h"; sourceTree = "<group>"; };
@@ -144,6 +145,7 @@
 		7BB682A6221C80E70008DB37 = {
 			isa = PBXGroup;
 			children = (
+				7BD02A042237FC0300794AA5 /* License.txt */,
 				7BB682B1221C80E70008DB37 /* MethodSwizzlingInCLI */,
 				7B6080E122353CDD00751401 /* MethodSwizzlingIniOS */,
 				7BD029FC2237FB2C00794AA5 /* IsaSwizzlingInCLI */,
@@ -291,7 +293,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = Frizlab;
+				ORGANIZATIONNAME = happn;
 				TargetAttributes = {
 					7B6080DF22353CDC00751401 = {
 						CreatedOnToolsVersion = 10.1;
