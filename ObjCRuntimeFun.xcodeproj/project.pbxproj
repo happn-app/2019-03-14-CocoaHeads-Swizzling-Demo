@@ -136,6 +136,7 @@
 		7BDFC218221CC48700AB1EAB /* HPNSimpleObject_M.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNSimpleObject_M.h; sourceTree = "<group>"; };
 		7BDFC219221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HPNSimpleObject+ManualSwizzle.h"; sourceTree = "<group>"; };
 		7BDFC21A221CC55E00AB1EAB /* HPNSimpleObject+ManualSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HPNSimpleObject+ManualSwizzle.m"; sourceTree = "<group>"; };
+		7BF01130223B9C6A0041A66C /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				7BD02A042237FC0300794AA5 /* License.txt */,
+				7BF01130223B9C6A0041A66C /* Readme.md */,
 				7BB682B1221C80E70008DB37 /* MethodSwizzlingInCLI */,
 				7B6080E122353CDD00751401 /* MethodSwizzlingIniOS */,
 				7BD029FC2237FB2C00794AA5 /* IsaSwizzlingInCLI */,
