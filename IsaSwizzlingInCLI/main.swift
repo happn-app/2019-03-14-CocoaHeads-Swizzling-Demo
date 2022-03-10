@@ -33,6 +33,7 @@ do {
 /* *** Standard isa-Swizzling *** */
 do {
 	HPNUtils.objc_try({
+		/* We **do** mean unsafeBitCast and not unsafeDowncast. */
 		let obj = unsafeBitCast(NSObject(), to: NSNumber.self)
 		
 		let ext1 = ObjectExtender(forwardObject: NSNumber(value: 42))
